@@ -1,0 +1,6 @@
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\bin\Debug\Entidades.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\obj\Debug\Entidades.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Entidades\obj\Debug\Entidades.pdb

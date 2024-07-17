@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Agregar</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h2>Agregar Pelicula</h2>
+            </div>
+            <nav>
+                <a href="/Home/Index">Cancelar</a>
+            </nav>
+        </header>
+        <main>
+            <div id="messages">
+                @TempData["error"]
+                @TempData["success"]
+            </div>
+            <form action="/Home/Agregar" method="post">
+                <label>Nombre de la pelicula: </label>
+                <input type="text" name="Nombre" required min="2"/> @*el name debe ser igual al campo en constructor*@
+                <label>Genero:</label>
+                <input type="text" name="Genero" required min="3"/>
+                <label>Fecha de estreno: </label>
+                <input type="datetime-local" name="FechaEstreno"/>
+                <input type="submit" value="Agregar"/>
+            </form>
+        </main>
+    </body>
+</html>

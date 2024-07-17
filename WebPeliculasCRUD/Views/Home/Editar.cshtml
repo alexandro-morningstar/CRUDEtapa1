@@ -1,0 +1,43 @@
+﻿@using Entidades
+@model E_Pelicula
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <title>Editar</title>
+    <style>
+        body {
+            background-color: #707F96;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Editar pelicula</h1>
+        </div>
+        <nav>
+            <a href="/Home/Index">Cancelar</a>
+        </nav>
+    </header>
+    <main>
+        <div id="messages">
+            @TempData["error"]
+            @TempData["success"]
+        </div>
+        <form action="/Home/Modificar" method="post">
+            <label>Nombre de la pelicula: </label>
+            <input type="text" name="Nombre" required min="2" /> @*el name debe ser igual al campo en constructor*@
+            <label>Genero:</label>
+            <input type="text" name="Genero" required min="3" />
+            <label>Fecha de estreno: </label>
+            <input type="datetime-local" name="FechaEstreno" />
+            <input type="submit" value="Modificar" />
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Negocio.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Datos.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Entidades.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Datos.pdb
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\obj\Debug\Negocio.dll
+C:\Users\Aleja\source\repos\SolPeliculasCRUD\Negocio\obj\Debug\Negocio.pdb

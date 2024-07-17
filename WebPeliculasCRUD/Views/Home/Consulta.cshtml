@@ -1,0 +1,61 @@
+﻿@using Entidades
+
+@model List<E_Pelicula>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+        <title>Consulta</title>
+        <style>
+            body {
+                background-color: #707F96;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Cartelera</h1>
+            </div>
+            <nav>
+                <a href="/Home/IrAgregar">Agregar pelicula</a>
+            </nav>
+        </header>
+        <main>
+            <div id="messages">
+                @TempData["error"]
+                @TempData["success"]
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Genero</th>
+                        <th>Fecha Estreno</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (E_Pelicula pelicula in Model)
+                    {
+                        <tr>
+                            <td>@pelicula.getIdPelicula</td>
+                            <td>@pelicula.getNombre</td>
+                            <td>@pelicula.getGenero</td>
+                            <td>@pelicula.getFechaEstreno</td>
+                            <td>
+                                <a href="/Home/IrEditar?id=@pelicula.getIdPelicula">Editar</a>
+                                <a href="/Home/IrEliminar?id=@pelicula.getIdPelicula">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
