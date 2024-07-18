@@ -11,17 +11,24 @@
     <title>Editar</title>
     <style>
         body {
-            background-color: #707F96;
+            background-color: #212529;
+            color: white;
+        }
+        header, main {
+            margin-top: 30px;
+        }
+        input[type=text], input[type=datetime] {
+            background-color: #87B4F8;
         }
     </style>
 </head>
-<body>
+<body class="container">
     <header>
-        <div>
-            <h1>Editar pelicula</h1>
-        </div>
-        <nav>
-            <a href="/Home/Index">Cancelar</a>
+        <nav class="navbar" style="background-color: #702CF6;">
+            <div class="container-fluid">
+                <h2 class="navbar-brand" style="color: white">Editar pelicula</h2>
+                <a class="btn btn-secondary" href="/Home/Index">Cancelar</a>
+            </div>
         </nav>
     </header>
     <main>
@@ -29,14 +36,21 @@
             @TempData["error"]
             @TempData["success"]
         </div>
-        <form action="/Home/Modificar" method="post">
-            <label>Nombre de la pelicula: </label>
-            <input type="text" name="Nombre" required min="2" /> @*el name debe ser igual al campo en constructor*@
-            <label>Genero:</label>
-            <input type="text" name="Genero" required min="3" />
-            <label>Fecha de estreno: </label>
-            <input type="datetime-local" name="FechaEstreno" />
-            <input type="submit" value="Modificar" />
+        <form action="/Home/Editar" method="post">
+            <input type="hidden" name="IdPelicula" value="@Model.IdPelicula" />
+            <div class="mb-3">
+                <label class="form-label">Nombre de la pelicula: </label>
+                <input class="form-control" type="text" name="Nombre" required min="2" value="@Model.Nombre" /> @*el name debe ser igual al campo en constructor*@
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Genero:</label>
+                <input class="form-control" type="text" name="Genero" required min="3" value="@Model.Genero" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de estreno: </label>
+                <input class="form-control" type="datetime" name="FechaEstreno" value="@Model.FechaEstreno" />
+            </div>
+            <button type="submit" class="btn btn-danger">Modificar</button>
         </form>
     </main>
 </body>

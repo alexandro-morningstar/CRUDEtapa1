@@ -61,6 +61,39 @@ namespace Datos
             return peliculas;
         }
 
+        public void Agregar(E_Pelicula pelicula)
+        {
+            SqlConnection conexion = new SqlConnection(CadenaConexion);
+
+            try
+            {
+                //Abrimos conexión a DB
+                conexion.Open();
+
+                //Objeto de la clase SqlCommand para ejecutar nuestro Stored Procedure
+                //Le pasamos al constructor le nombre del Stored Procedure y la conexión
+                SqlCommand comando = new SqlCommand("agregar_pelicula", conexion);
+
+                //Indicar al objeto comando que va a ejecutar un Stored Procedure
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                //Como el Stored Procedure recibe parametros, antes de ejecutarlos le pasamos los valores a dichos parámetros
+                comando.Parameters.AddWithValue("@nombre", pelicula.Nombre);
+                comando.Parameters.AddWithValue("@genero", pelicula.Genero);
+                comando.Parameters.AddWithValue("@fechaEstreno", pelicula.FechaEstreno);
+
+                //Ejecutar el comando (Stored Procedure)
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+        }
 
         // Paso 1 para editar/eliminar
         public E_Pelicula ObtenerPorID(int id)
@@ -109,28 +142,28 @@ namespace Datos
             return pelicula;
         }
 
-        public void Agregar(E_Pelicula pelicula)
+        public void Modificar(E_Pelicula pelicula)
         {
             SqlConnection conexion = new SqlConnection(CadenaConexion);
 
             try
             {
-                //Abrimos conexión a DB
+                //Abrir conexion
                 conexion.Open();
 
-                //Objeto de la clase SqlCommand para ejecutar nuestro Stored Procedure
-                //Le pasamos al constructor le nombre del Stored Procedure y la conexión
-                SqlCommand comando = new SqlCommand("agregar_pelicula", conexion);
+                //Objeto SqlCommand("nombre del SP", conexion)
+                SqlCommand comando = new SqlCommand("editar_pelicula", conexion);
 
-                //Indicar al objeto comando que va a ejecutar un Stored Procedure
+                //Especificar el uso de SP
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-                //Como el Stored Procedure recibe parametros, antes de ejecutarlos le pasamos los valores a dichos parámetros
+                //Pasar parametros
+                comando.Parameters.AddWithValue("@idPelicula", pelicula.IdPelicula);
+
                 comando.Parameters.AddWithValue("@nombre", pelicula.Nombre);
                 comando.Parameters.AddWithValue("@genero", pelicula.Genero);
                 comando.Parameters.AddWithValue("@fechaEstreno", pelicula.FechaEstreno);
-
-                //Ejecutar el comando (Stored Procedure)
+                //Ejecutar comando
                 comando.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -143,5 +176,31 @@ namespace Datos
             }
         }
 
+        public void Eliminar(int id)
+        {
+            SqlConnection conexion = new SqlConnection(CadenaConexion);
+
+            try
+            {
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand("eliminar_pelicula", conexion);
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@idPelicula", id);
+
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+        }
     }
 }

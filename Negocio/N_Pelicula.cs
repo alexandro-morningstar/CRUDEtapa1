@@ -38,5 +38,23 @@ namespace Negocio
 
             return pelicula;
         }
+
+        public void Modificar(E_Pelicula pelicula)
+        {
+            //Crear un objeto de la capa de datos
+            D_Pelicula datos = new D_Pelicula();
+
+            //Le pasamos el metodo Modificar
+            datos.Modificar(pelicula);
+        }
+
+        public void Eliminar(int id)
+        {
+            //Crear un objeto de la capa de datos
+            D_Pelicula datos = new D_Pelicula();
+
+            //Le pasamos el metodo Modificar
+            datos.Eliminar(id);
+        }
     }
 }

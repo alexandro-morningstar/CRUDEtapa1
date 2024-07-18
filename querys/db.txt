@@ -1,0 +1,57 @@
+USE Alexandro;
+
+-- Crear nuevo stored procedure
+
+-- CREATE --
+CREATE PROCEDURE agregar_pelicula
+@nombre VARCHAR(100),
+@genero VARCHAR(100),
+@fechaEstreno DATETIME
+AS
+BEGIN
+	INSERT INTO Peliculas(nombre,genero,fechaEstreno) VALUES (@nombre,@genero,@fechaEstreno);
+END;
+
+-- Crear nuevo stored procedure en una linea
+-- SELECT ALL --
+CREATE PROCEDURE obtener_todos_peliculas AS BEGIN SELECT idPelicula,nombre,genero,fechaEstreno FROM Peliculas; END;
+
+-- SELECT BY ID --
+CREATE PROCEDURE obtener_pelicula_id @idPelicula AS INT AS BEGIN SELECT nombre,genero,fechaEstreno FROM Peliculas WHERE idPelicula=@idPelicula; END;
+
+-- ELIMINAR (por ID) --
+CREATE PROCEDURE eliminar_pelicula @idPelicula INT AS BEGIN DELETE FROM  Peliculas WHERE idPelicula=@idPelicula; END;
+
+-- EDITAR REGISTRO --
+CREATE PROCEDURE editar_pelicula @nombre VARCHAR(100),@genero VARCHAR(100),@fechaEstreno DATETIME,@idPelicula INT AS BEGIN UPDATE Peliculas SET nombre=@nombre,genero=@genero,fechaEstreno=@fechaEstreno WHERE idPelicula=@idPelicula; END;
+
+-- Modificar procedure
+ALTER PROCEDURE obtener_todos_peliculas AS BEGIN SELECT idPelicula,nombre,genero FROM Peliculas; END; --Lo mismo pero sin la fecha de estreno
+
+ALTER PROCEDURE obtener_pelicula_id @idPelicula AS INT AS BEGIN SELECT idPelicula,nombre,genero,fechaEstreno FROM Peliculas WHERE idPelicula=@idPelicula; END;
+
+-- Ejecutar Stored Procedures
+EXECUTE agregar_pelicula 'Alien: Covenant','Terror - CiFi','2017-06-28 20:00:00';
+
+EXECUTE obtener_todos_peliculas;
+
+-- Alternativa a la mod
+CREATE OR ALTER PROCEDURE obtener_todos_peliculas AS BEGIN SELECT idPelicula,nombre,genero,fechaEstreno FROM Peliculas; END; --Si no existe, crea; Si existe, modifica
+
+--Obtener codigo de un stored procedure
+EXECUTE sp_helptext 'agregar_pelicula';
+
+EXECUTE sp_helptext 'obtener_pelicula_id';
+
+
+
+EXECUTE agregar_pelicula @nombre='Terminator:Judgmen Day',@genero='Ci-Fi',@fechaEstreno='1991-06-28 20:00:00';
+EXECUTE agregar_pelicula @nombre='Predator',@genero='Thriller - CiFi',@fechaEstreno='1987-06-28 20:00:00';
+
+EXECUTE obtener_todos_peliculas;
+
+EXECUTE obtener_pelicula_id @idPelicula=1;
+
+EXECUTE eliminar_pelicula @idPelicula=3;
+
+EXECUTE editar_pelicula @nombre='Aliens: Return',@genero='Terror - CiFi',@fechaEstreno='1986-06-28 12:00:00',@idPelicula=1;

@@ -1,0 +1,65 @@
+﻿@using Entidades
+@model E_Pelicula
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <title>Eliminar</title>
+    <style>
+        body {
+            background-color: #212529;
+            color: white;
+        }
+
+        header, main {
+            margin-top: 30px;
+        }
+
+        input[type=text], input[type=datetime] {
+            background-color: #87B4F8;
+        }
+    </style>
+</head>
+    <body class="container">
+        <header>
+            <nav class="navbar" style="background-color: #702CF6;">
+                <div class="container-fluid">
+                    <h2 class="navbar-brand" style="color: white">Eliminar pelicula</h2>
+                    <a class="btn btn-secondary" href="/Home/Index">Cancelar</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="messages">
+                @TempData["error"]
+                @TempData["success"]
+            </div>
+            <table class="table table-bordered table-dark table-hover">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Fecha Estreno</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.getNombre</td>
+                        <td>@Model.getGenero</td>
+                        <td>@Model.getFechaEstreno</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="/Home/Eliminar?id=@Model.IdPelicula" method="post">
+                <div class="form-check form-switch">
+                    <label>Marca la casilla para confirmar la accion: </label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="confirmacion" value="true">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Sí, eliminar registro</label>
+                </div>
+                <button class="btn btn-danger" type="submit">Eliminar</button>
+            </form>
+        </main>
+    </body>
+</html>

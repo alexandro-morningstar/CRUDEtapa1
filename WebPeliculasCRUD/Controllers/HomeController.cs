@@ -74,5 +74,68 @@ namespace WebPeliculasCRUD.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public ActionResult Editar(E_Pelicula pelicula)
+        {
+
+            N_Pelicula negocio = new N_Pelicula();
+            try
+            {
+                negocio.Modificar(pelicula);
+                TempData["success"] = $"La pelicula con el id: {pelicula.getIdPelicula} fue modificada exitosamente";
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult IrEliminar(int id)
+        {
+            //Crear objeto para la pelicula
+            E_Pelicula pelicula = new E_Pelicula();
+
+            //Obtenemos la info de la pelicula de la capa Negocio
+            try
+            {
+                //Objeto de la capa Negocio
+                N_Pelicula negocio = new N_Pelicula();
+                pelicula = negocio.ObtenerPorID(id);
+                return View("Eliminar", pelicula);
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Eliminar(int id, bool? confirmacion = null)
+        {
+            if (confirmacion == null)
+            {
+                TempData["error"] = "No se ha confirmado la accion";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                //Objeto de la capa anterior (negocio) la cual contiene el metodo, heredado a su vez de la capa de datos
+                N_Pelicula eliminador = new N_Pelicula();
+
+                try
+                {
+                    eliminador.Eliminar(id); /*usa el metodo eliminar de la herramienta eliminador en el id*/
+                    TempData["success"] = $"La pelicula con el ID: {id} ha sido eliminada correctamente.";
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    TempData["error"] = ex.Message;
+                    return RedirectToAction("Index");
+                }
+
+            }
+        }
     }
 }
