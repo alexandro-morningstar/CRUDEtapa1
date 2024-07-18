@@ -12,17 +12,23 @@
         <title>Consulta</title>
         <style>
             body {
-                background-color: #707F96;
+                background-color: #212529;
+                color: white;
+            }
+
+            header {
+                margin-top: 30px;
+                border-radius: 5px;
             }
         </style>
     </head>
-    <body>
+    <body class="container">
         <header>
-            <div>
-                <h1>Cartelera</h1>
-            </div>
-            <nav>
-                <a href="/Home/IrAgregar">Agregar pelicula</a>
+            <nav class="navbar" style="background-color: #702CF6";>
+                <div class="container-fluid">
+                    <h1 class="navbar-brand" style="color: white;">Cartelera</h1>
+                    <a class="btn btn-info" href="/Home/IrAgregar">Agregar pelicula</a>
+                </div>
             </nav>
         </header>
         <main>
@@ -30,7 +36,7 @@
                 @TempData["error"]
                 @TempData["success"]
             </div>
-            <table>
+            <table class="table table-bordered table-dark table-hover">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -49,8 +55,8 @@
                             <td>@pelicula.getGenero</td>
                             <td>@pelicula.getFechaEstreno</td>
                             <td>
-                                <a href="/Home/IrEditar?id=@pelicula.getIdPelicula">Editar</a>
-                                <a href="/Home/IrEliminar?id=@pelicula.getIdPelicula">Eliminar</a>
+                                <a class="btn btn-info" href="/Home/IrEditar?id=@pelicula.getIdPelicula">Editar</a>
+                                <a class="btn btn-danger" href="/Home/IrEliminar?id=@pelicula.getIdPelicula">Eliminar</a>
                             </td>
                         </tr>
                     }
