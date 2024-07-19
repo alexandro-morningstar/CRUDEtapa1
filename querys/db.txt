@@ -55,3 +55,22 @@ EXECUTE obtener_pelicula_id @idPelicula=1;
 EXECUTE eliminar_pelicula @idPelicula=3;
 
 EXECUTE editar_pelicula @nombre='Aliens: Return',@genero='Terror - CiFi',@fechaEstreno='1986-06-28 12:00:00',@idPelicula=1;
+
+-- BUSQUEDAS
+
+SELECT * FROM Peliculas WHERE nombre LIKE '%back%'; --Por lo visto no es key sensitive
+
+CREATE PROCEDURE buscar_peliculas @texto VARCHAR(100) AS BEGIN SELECT idPelicula,nombre,genero,fechaEstreno FROM Peliculas WHERE nombre LIKE '%'+@texto+'%'; END;
+
+EXECUTE buscar_peliculas @texto=ali;
+
+CREATE PROCEDURE buscar_pelicula_nombre @nombre VARCHAR(100) AS BEGIN SELECT idPelicula,nombre,genero,fechaEstreno FROM Peliculas WHERE nombre LIKE '%'+@texto+'%'; END;
+
+CREATE PROCEDURE busca_pelicula_nombre
+@nombre VARCHAR(100)
+AS
+BEGIN
+	SELECT idPelicula,nombre,genero,fechaEstreno
+	FROM Peliculas
+	WHERE nombre = @nombre
+END;
