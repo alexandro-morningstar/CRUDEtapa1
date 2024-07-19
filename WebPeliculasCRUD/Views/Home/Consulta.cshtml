@@ -32,36 +32,44 @@
             </nav>
         </header>
         <main>
-            <div id="messages">
-                @TempData["error"]
-                @TempData["success"]
+            <div id="messages" class="mt-1">
+                @if (TempData["error"] != null)
+                {
+                    <p class="alert alert-danger">@TempData["error"]</p>
+                }
+                @if (TempData["success"] != null)
+                {
+                    <p class="alert alert-success">@TempData["success"]</p>
+                }
             </div>
-            <table class="table table-bordered table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Genero</th>
-                        <th>Fecha Estreno</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (E_Pelicula pelicula in Model)
-                    {
+            <div class="mt-3">
+                <table class="table table-bordered table-dark table-hover">
+                    <thead>
                         <tr>
-                            <td>@pelicula.getIdPelicula</td>
-                            <td>@pelicula.getNombre</td>
-                            <td>@pelicula.getGenero</td>
-                            <td>@pelicula.getFechaEstreno</td>
-                            <td>
-                                <a class="btn btn-info" href="/Home/IrEditar?id=@pelicula.getIdPelicula">Editar</a>
-                                <a class="btn btn-danger" href="/Home/IrEliminar?id=@pelicula.getIdPelicula">Eliminar</a>
-                            </td>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Genero</th>
+                            <th>Fecha Estreno</th>
+                            <th>Acciones</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach (E_Pelicula pelicula in Model)
+                        {
+                            <tr>
+                                <td>@pelicula.getIdPelicula</td>
+                                <td>@pelicula.getNombre</td>
+                                <td>@pelicula.getGenero</td>
+                                <td>@pelicula.getFechaEstreno</td>
+                                <td>
+                                    <a class="btn btn-info" href="/Home/IrEditar?id=@pelicula.getIdPelicula">Editar</a>
+                                    <a class="btn btn-danger" href="/Home/IrEliminar?id=@pelicula.getIdPelicula">Eliminar</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </main>
     </body>
 </html>

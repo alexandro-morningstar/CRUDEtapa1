@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\webpeliculascrud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,12 +31,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Consulta.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "RelativeToolTip": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwCgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T14:26:51.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebPeliculasCRUD\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAADwv3kAAAANAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwHkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T17:18:08.494Z",
               "EditorCaption": ""
