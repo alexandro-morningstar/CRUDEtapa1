@@ -42,6 +42,12 @@
                     <p class="alert alert-success">@TempData["success"]</p>
                 }
             </div>
+            <div> <!--Buscardor-->
+                <form action="/Home/Buscar" method="post">
+                    <input type="text" name="textoBusqueda" class="form-control" placeholder="Busqueda por nombre o genero"/>
+                    <button type="submit" class="btn btn-info">Buscar</button>
+                </form>
+            </div>
             <div class="mt-3">
                 <table class="table table-bordered table-dark table-hover">
                     <thead>

@@ -45,13 +45,12 @@ namespace WebPeliculasCRUD.Controllers
 
                 //Llamamos al método Agregar
                 negocio.Agregar(objPelicula);
+                TempData["success"] = "Pelicula agregada satisfactoriamente";
             }
             catch (Exception ex)
             {
                 TempData["error"] = ex.Message;
             }
-
-            TempData["success"] = "Pelicula agregada satisfactoriamente";
             return RedirectToAction("Index");
         }
 
@@ -89,6 +88,22 @@ namespace WebPeliculasCRUD.Controllers
                 TempData["error"] = ex.Message;
             }
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Buscar(string textoBusqueda)
+        {
+            N_Pelicula negocio = new N_Pelicula();
+
+            try
+            {
+                List<E_Pelicula> peliculas = negocio.Buscar(textoBusqueda);
+                return View("Consulta", peliculas);
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = ex.Message;
+                return RedirectToAction("Index");
+            }
         }
 
         public ActionResult IrEliminar(int id)

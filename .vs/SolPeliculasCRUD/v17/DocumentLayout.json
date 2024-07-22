@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B067D507-B515-43D8-ADDD-E8741CF89109}|Negocio\\Negocio.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\negocio\\n_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B067D507-B515-43D8-ADDD-E8741CF89109}|Negocio\\Negocio.csproj|solutionrelative:negocio\\n_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92755DB6-4856-47B2-BA41-E076C7BF76B5}|Datos\\Datos.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\datos\\d_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92755DB6-4856-47B2-BA41-E076C7BF76B5}|Datos\\Datos.csproj|solutionrelative:datos\\d_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|c:\\users\\aleja\\source\\repos\\solpeliculascrud\\webpeliculascrud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F563E6-02B9-47C7-84F9-E24D55F27AF6}|Entidades\\Entidades.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\entidades\\e_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F563E6-02B9-47C7-84F9-E24D55F27AF6}|Entidades\\Entidades.csproj|solutionrelative:entidades\\e_pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\webpeliculascrud\\views\\home\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\views\\home\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DB72396-AC04-4A05-9DE4-7295F3A9AB13}|WebPeliculasCRUD\\WebPeliculasCRUD.csproj|solutionrelative:webpeliculascrud\\views\\home\\consulta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +54,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Consulta.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
-              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
-              "RelativeToolTip": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCgAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-19T14:26:51.202Z",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Web.config",
+              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Web.config",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Web.config",
+              "RelativeToolTip": "WebPeliculasCRUD\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-07-22T05:55:00.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "web.config",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\web.config",
+              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Views\\web.config",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\web.config",
+              "RelativeToolTip": "WebPeliculasCRUD\\Views\\web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-07-22T05:54:15.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "D_Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Datos\\D_Pelicula.cs",
+              "RelativeDocumentMoniker": "Datos\\D_Pelicula.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Datos\\D_Pelicula.cs",
+              "RelativeToolTip": "Datos\\D_Pelicula.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAA5wF8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:43:37.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "N_Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Negocio\\N_Pelicula.cs",
+              "RelativeDocumentMoniker": "Negocio\\N_Pelicula.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Negocio\\N_Pelicula.cs",
+              "RelativeToolTip": "Negocio\\N_Pelicula.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA2wBcAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:36:02.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Consulta.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "RelativeToolTip": "WebPeliculasCRUD\\Views\\Home\\Consulta.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-19T14:26:51.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Agregar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Agregar.cshtml",
+              "RelativeDocumentMoniker": "WebPeliculasCRUD\\Views\\Home\\Agregar.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Views\\Home\\Agregar.cshtml",
+              "RelativeToolTip": "WebPeliculasCRUD\\Views\\Home\\Agregar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T21:53:48.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\WebPeliculasCRUD\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebPeliculasCRUD\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAAwHkAAAANAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAA5wC8AAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-15T17:18:08.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "E_Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Entidades\\E_Pelicula.cs",
+              "RelativeDocumentMoniker": "Entidades\\E_Pelicula.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolPeliculasCRUD\\Entidades\\E_Pelicula.cs",
+              "RelativeToolTip": "Entidades\\E_Pelicula.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:49:05.13Z",
               "EditorCaption": ""
             }
           ]

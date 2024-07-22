@@ -176,21 +176,35 @@ namespace Datos
             }
         }
 
-        public void Eliminar(int id)
+        public List<E_Pelicula> Buscar(string texto)
         {
+            List<E_Pelicula> lista = new List<E_Pelicula>();
+
             SqlConnection conexion = new SqlConnection(CadenaConexion);
 
             try
             {
                 conexion.Open();
 
-                SqlCommand comando = new SqlCommand("eliminar_pelicula", conexion);
+                SqlCommand comando = new SqlCommand("buscar_peliculas", conexion);
 
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
 
-                comando.Parameters.AddWithValue("@idPelicula", id);
+                comando.Parameters.AddWithValue("@texto", texto);
 
-                comando.ExecuteNonQuery();
+                SqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    E_Pelicula pelicula = new E_Pelicula();
+
+                    pelicula.IdPelicula = Convert.ToInt32(reader["idPelicula"]);
+                    pelicula.Nombre = Convert.ToString(reader["nombre"]);
+                    pelicula.Genero = Convert.ToString(reader["genero"]);
+                    pelicula.FechaEstreno = Convert.ToDateTime(reader["fechaEstreno"]);
+
+                    lista.Add(pelicula);
+                }
             }
             catch (Exception ex)
             {
@@ -201,6 +215,73 @@ namespace Datos
                 conexion.Close();
             }
 
+            return lista;
+        }
+
+        public E_Pelicula BuscarPorNombre(string nombre)
+        {
+            //Inicializamos como null por default
+            E_Pelicula objPelicula = null;
+            SqlConnection conexion = new SqlConnection(CadenaConexion);
+
+            try
+            {
+                conexion.Open();
+
+                SqlCommand comando = new SqlCommand("buscar_pelicula_nombre", conexion);
+
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@nombre", nombre);
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.Read()) //Si ya existe la pelicula, dejará de ser null y armaremos el objeto con la info encontrada
+                {
+                    objPelicula = new E_Pelicula();
+                    objPelicula.IdPelicula = Convert.ToInt32(reader["idPelicula"]);
+                    objPelicula.Nombre = Convert.ToString(reader["nombre"]);
+                    objPelicula.Genero = Convert.ToString(reader["genero"]);
+                    objPelicula.FechaEstreno = Convert.ToDateTime(reader["fechaEstreno"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return objPelicula;
+        }
+
+            public void Eliminar(int id)
+            {
+                SqlConnection conexion = new SqlConnection(CadenaConexion);
+
+                try
+                {
+                    conexion.Open();
+
+                    SqlCommand comando = new SqlCommand("eliminar_pelicula", conexion);
+
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    comando.Parameters.AddWithValue("@idPelicula", id);
+
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conexion.Close();
+                }
+
+            }
         }
     }
-}
